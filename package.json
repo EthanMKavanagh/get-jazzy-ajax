@@ -1,7 +1,7 @@
 {
   "name": "get-jazzy-ajax-get",
   "version": "1.0.0",
-  "description": "",
+  "description": "- Fork - Clone - `npm install` to get all of the dependencies (just `express` for now)",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -11,6 +11,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.3"
-  }
+    "express": "^4.17.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kavy-1/get-jazzy-ajax.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Kavy-1/get-jazzy-ajax/issues"
+  },
+  "homepage": "https://github.com/Kavy-1/get-jazzy-ajax#readme"
 }
