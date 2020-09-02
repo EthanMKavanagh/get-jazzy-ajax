@@ -6,7 +6,7 @@ const app = express();
 const PORT = 5000;
 
 // Defining an array of artists including their
-// year or birth and death
+// year of birth and death
 const artistListArray = [
     {
         name: 'Miles Davis',
@@ -30,7 +30,7 @@ const artistListArray = [
     },
 ];
 
-// Defining songs and their artist
+// Defining songs array and their artist
 const songListArray = [
     {
         title: 'Take Five',
@@ -60,7 +60,10 @@ app.get('/artist', (req, res) => {
 });
 
 // TODO - Add GET for songs
-
+app.get( `/song`, function( req, res ){
+    console.log( 'in GET for /song, should display song array', songListArray );
+    res.send( songListArray );
+} )
 
 // Listening for requests
 app.listen(PORT, () => {

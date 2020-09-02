@@ -1,7 +1,7 @@
 // Initializing jQuery
 $(document).ready(onReady);
 
-// Running a function with ajax
+// Running a function with ajax (GET)
 function onReady() {
     $.ajax({
         type: 'GET',
@@ -22,4 +22,5 @@ function onReady() {
     });
 
     // TODO Add ajax request for /songs and display on DOM
+
 }
