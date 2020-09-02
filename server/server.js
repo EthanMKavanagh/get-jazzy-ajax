@@ -59,7 +59,7 @@ app.get('/artist', (req, res) => {
     res.send(artistListArray);
 });
 
-// TODO - Add GET for songs
+// TODO(TODONE) - Add GET for songs
 app.get( `/song`, function( req, res ){
     console.log( 'in GET for /song, should display song array', songListArray );
     res.send( songListArray );

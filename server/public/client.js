@@ -22,5 +22,18 @@ function onReady() {
     });
 
     // TODO Add ajax request for /songs and display on DOM
-
-}
+    $.ajax( {
+        type: 'GET',
+        url: '/song'
+    } ).then( function( response ){
+        for( let i = 0; i < response.length; i++ ){
+            let song = response[ i ];
+            $( '#songTableBody' ).append( `
+                <tr>
+                    <td>${song.title}</td>
+                    <td>${song.artist}</td>
+                </tr>
+            ` ) // end append
+        } // end for
+    } ) // end ajax and function
+} // end onReady
