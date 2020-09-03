@@ -36,4 +36,20 @@ function onReady() {
             ` ) // end append
         } // end for
     } ) // end ajax and function
+
+    //Client side for titlesAndYears
+    $.ajax( {
+        type: 'GET',
+        url: '/thirdArrayTitlesAndYears'
+    } ).then( function( response ){
+        for( let i = 0; i < response.length; i++ ){
+            let titlesAndYears = response[ i ];
+            $( '#titlesAndYearsBody' ).append( `
+                <tr>
+                    <td>${titlesAndYears.title}</td>
+                    <td>${titlesAndYears.year}</td>
+                </tr>
+            ` ) // end append
+        } // end for
+    } ) // end ajax and function
 } // end onReady

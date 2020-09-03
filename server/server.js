@@ -14,6 +14,9 @@ let songListArray = require( `./modules/songs.js` );
 // Now, importing in:
 let artistListArray = require( `./modules/artist.js` );
 
+// Adding third array:
+let titlesAndYears = require( `./modules/thirdArrayTitlesAndYears.js` );
+
 // Setting up static (html)
 app.use(express.static('server/public'));
 
@@ -27,6 +30,12 @@ app.get('/artist', (req, res) => {
 app.get( `/song`, function( req, res ){
     console.log( 'in GET for /song, should display song array', songListArray );
     res.send( songListArray );
+} )
+
+// Third Array GET
+app.get( `/thirdArrayTitlesAndYears`, function( req, res ){
+    console.log( 'in GET for /thirdArrayTitlesAndYears!', titlesAndYears );
+    res.send( titlesAndYears );
 } )
 
 // Listening for requests
